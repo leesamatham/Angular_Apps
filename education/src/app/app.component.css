@@ -1,0 +1,15 @@
+nav{
+    background-color: gray;
+    
+}
+.navbar-nav .nav-item .nav-link{
+    color:black;
+    font-size:16px;
+
+}
+.navbar-nav .nav-item .nav-link:hover{
+    color:black;
+    font-size:16px;
+    color:blueviolet
+    
+}
