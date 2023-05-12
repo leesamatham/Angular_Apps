@@ -1,0 +1,7 @@
+API : https://newsapi.org/docs/endpoints/top-headlines
+
+Generate API Key
+
+ngx- lodingbar
+
+https://github.com/aitboudad/ngx-loading-bar
