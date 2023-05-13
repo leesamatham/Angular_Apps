@@ -24,7 +24,14 @@ export class RegisterComponent implements OnInit {
   }
   submitData(){
     console.log(this.registerFormObject.value);
-}
+    alert('Thanks for Registering');
+    this.registerFormObject.reset();
+  }
+
+  resetData(){
+    this.registerFormObject.reset();
+    
+  }
 
 // Get the values for validation
 get firstname(){
@@ -43,8 +50,5 @@ get mobilenum(){
   return this.registerFormObject.get('mobile')
 }
 
-reset(){
-  this.registerFormObject.reset();
-  
-}
+
 }
