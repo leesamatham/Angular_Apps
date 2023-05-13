@@ -3,7 +3,10 @@
     <h3>Top Headlines</h3>
     <div class="row">
         <div class="col-lg-3 mt-3"
-            *ngFor="let d of topHeadingDisplay">
+            *ngFor="let d of topHeadingDisplay | 
+            paginate: { itemsPerPage: 8, 
+                        currentPage: page,
+                        totalItems: totalPages }">
             <div class="box">
                 <img src="{{d.urlToImage}}" width="100%">
                 <h5 class="mt-2 mb-2">{{d.title}}</h5>
@@ -12,4 +15,9 @@
             </div>
         </div>
     </div>
+    <footer class="text-center mt-3">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </footer>
+    
 </div>
+

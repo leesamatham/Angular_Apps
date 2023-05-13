@@ -13,6 +13,8 @@ import { TechNewsComponent } from './tech-news/tech-news.component';
 import { BusinessNewsComponent } from './business-news/business-news.component';
 import { SportsNewsComponent } from './sports-news/sports-news.component';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import {NgxPaginationModule} from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    LoadingBarHttpClientModule
+    LoadingBarHttpClientModule,
+    NgxPaginationModule
   ],
   providers: [ NewsApiServiceService],
   bootstrap: [AppComponent]

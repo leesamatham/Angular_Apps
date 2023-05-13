@@ -8,12 +8,16 @@ import { NewsApiServiceService } from '../service/news-api-service.service';
 })
 export class HeadingComponent implements OnInit {
 
+  page:number=1;
+  totalPages:any;
+
   constructor(public news:NewsApiServiceService) { }
   topHeadingDisplay:any=[];
   ngOnInit(): void {
     this.news.topHeading().subscribe(res=>{
       console.log(res);
       this.topHeadingDisplay=res.articles;
+      this.totalPages=this.topHeadingDisplay.length;
     })
    }
   }
