@@ -1,1 +1,35 @@
-<p>signin works!</p>
+
+<form class="content" 
+[formGroup]="signFormObject" 
+(ngSubmit)="submitSigninData()">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail">Email</label>
+          <input 
+          type="email" 
+          class="form-control" 
+          id="inputEmail"
+          formControlName="email"
+          >
+          <!-- <div *ngIf="email.invalid && email.touched">
+              <span *ngIf="email.errors.email" class="error-message"> Enter valid email </span>
+              <span *ngIf="email.errors.required" class="error-message">Enter email</span>
+          </div> -->
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword">Password</label>
+          <input 
+          type="password" 
+          class="form-control" 
+          id="inputPassword"
+          formControlName="password">
+          <!-- <div *ngIf="pw.invalid && pw.touched">
+              <span *ngIf="pw.errors.required">Enter password</span>
+              <span *ngIf="pw.errors.minLength">Enter min 6 letters</span>
+          </div> -->
+        </div>
+      </div>
+    
+        <button type="submit" class="btn btn-primary btn-md">Sign In</button>
+    
+</form>
