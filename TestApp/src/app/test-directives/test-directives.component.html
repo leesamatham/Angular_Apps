@@ -1,0 +1,64 @@
+<!-- Directive -->
+<!--  Types of Directives
+1.Component Directive
+2.Structural Directive - ngIf/ngFor/ngSwitch
+3.Attribute Directive - ngStyle/ngClass
+4.Custom Directive -->
+
+<!-- Component Directive -->
+<!-- Syntax: <component-selector-name [input-reference]="input-value"> ... </component-selector-name>
+ -->
+
+ <!-- Structural Directive - ngIf/ngIfElse-->
+ <h2>ngIf Directive</h2>
+ <p *ngIf="isStatus" [class]="myClass">
+    Hi lee
+ </p>
+
+ <div *ngIf="isLogin; else isLogout">
+    Hello you are logged In !!
+ </div>
+ <ng-template #isLogout>
+    You are logged out
+ </ng-template>
+<br>
+<br>
+<h2>ngFor Directive</h2>
+ <ul [class]="myClass1" *ngFor="let item of testArr">
+    <li>{{ item}}</li>
+ </ul>
+
+ <!-- trackBy is used to track the elements using index -->
+<h2>ngSwitch Directive</h2>
+ <ul [ngSwitch]="logInName">
+    <li *ngSwitchCase="'user'">
+        <p>User is logged in...</p>
+    </li>
+    <li *ngSwitchCase="'admin'">
+        <p>Admin is logged in</p>
+    </li>
+    <li *ngSwitchDefault>
+        <p>Please choose login Name</p>
+    </li>
+ </ul>
+ <!-- Attribute Directive -->
+ <!-- ngStyle/ngClass/ngModel -->
+<p [ngStyle]="{'color':'green','font-size':'20px'}">
+Ng Style is applied </p>
+
+
+<div>
+    <ul>
+        <!-- <li *ngFor="let user of users"
+        [ngClass]="user.userName==='user3'?'highlight':''">
+            {{ user.userName}}
+        </li> -->
+<!-- OR -->
+
+        <li *ngFor="let user of users"
+        [ngClass]="
+        {'highlight':user.userName==='user1'}">
+            {{ user.userName}}
+        </li>
+    </ul>
+</div>

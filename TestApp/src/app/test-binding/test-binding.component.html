@@ -1,0 +1,50 @@
+<!-- Display Data from Component Class -->
+<!-- 1.String Interpolation -->
+<div class="container-fluid text-center">
+    <h2 class="bg-dark text-white m-3 p-4">{{testStr}}</h2>
+</div>
+
+<!-- Property Binding -->
+<!-- Syntax <ele [ele-property]="component property/variable" -->
+ <!-- <input type="text" [value]="testStr"> -->
+ <br>
+ <img [src]="imgSrc" alt="imgAlt" [class]="imgClass">
+ <button type="button" [disabled]="isChanged">Click Me</button>
+
+
+ <!-- Event Binding -->
+ <!-- syntax  <ele (ele-Method)="Component method" -->
+ <button type="button" (click)="submit()">Click Me</button>
+
+
+ <!-- Attribute Binding -->
+ <!-- syntax  <ele [attr.ele-attribute]="Component property/variable" -->
+<!-- Used to bind the element attribute values -->
+    <table>
+    <tr [attr.colspan]="columnSpan">
+        <td>FName</td>
+        <td>LName</td>
+    </tr>
+    <tr>
+        <td>Lee</td>
+        <td>Kodavati</td>
+        <td>Hyderabad</td>
+    </tr>
+</table>
+
+<!-- Class Binding 
+used to bind the data from component to HTML class property. 
+-->
+<!-- syntax <ele [class]= "component property"
+component property stores the class name-->
+<p [class]="myClass"> Hello World</p>
+
+
+ <!--Style Binding  -->
+
+ <p [style.color]="myStyle">Hello World</p>
+ 
+<!-- Two-way binding -->
+
+<input type="text" [(ngModel)]="myName">
+<p>{{myName}}</p>
