@@ -10,6 +10,13 @@ import { TestCommunicationComponent } from './test-communication/test-communicat
 import { TemplateFormsComponent } from './template-forms/template-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { HomeComponent } from './home/home.component';
+import { HighlightDirective } from './highlight.directive';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { ListProductsComponent } from './list-products/list-products.component';
+import { CountDigitPipe } from './count-digit.pipe';
+import { ReactiveProgramComponent } from './reactive-program/reactive-program.component';
+import { ReactiveComponent } from './reactive/reactive.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,14 @@ import { HomeComponent } from './home/home.component';
     TestCommunicationComponent,
     TemplateFormsComponent,
     ReactiveFormsComponent,
-    HomeComponent
+    HomeComponent,
+    HighlightDirective,
+    ParentComponent,
+    ChildComponent,
+    ListProductsComponent,
+    CountDigitPipe,
+    ReactiveProgramComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,

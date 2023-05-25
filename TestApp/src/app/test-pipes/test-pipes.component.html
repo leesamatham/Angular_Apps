@@ -1,1 +1,65 @@
-<p>test-pipes works!</p>
+<!-- <p>test-pipes works!</p> -->
+<!-- 
+    Pipes are referred as filters. It helps to transform data and manage data within interpolation, denoted by {{ | }}.
+ -->
+
+ <div>
+   <!-- Pipes -->
+   <h2>Pipes using | </h2>
+   Today Date is  {{ currentDate | date}}
+   <br>
+   <h2>Parameter Pipes  using :</h2>
+   <!-- Parameters in pipes 
+   We can add parameter in pipe using : character.-->
+   Full date is {{ currentDate | date:'fullDate'}}
+   <br>
+   Short date is {{ currentDate | date:'shortDate' }}
+   <br>
+   Formatted Date is {{ currentDate | date:'M/dd/yyyy'}}
+   <br>
+   Hours and minutes {{ currentDate | date:'h:mm'}}
+   <br>
+   Amount is {{ amount | currency:'EUR'}}
+ </div>
+
+ <!-- Chained pipes 
+    We can combine multiple pipes together. -->
+
+    <div>
+        <h2>Chained Pipes using | : |</h2>
+        <h3>{{ title | uppercase}}</h3>
+        Date is {{ currentDate | date:'fullDate' | uppercase }}
+    </div>
+
+    <!-- Async pipe -->
+    <!-- slice Pipe
+    Slice pipe is used to return a slice of an array. It takes index as an argument. 
+    If you assign only start index, means it will print till the end of values. -->
+
+<div>
+    <h2>Slice Pipe</h2>
+    <p>First index is positive from 0,index from last position is -1</p>
+    {{ fruits | slice:2}}
+    <br>
+    {{ fruits | slice:2:4}}
+</div>
+
+
+<div>
+    <h2>Decimal Pipes</h2>
+    {{ price2 | number:'3.2'}}
+    <br>
+    {{ price2 | percent:'2.2'}}
+</div>
+
+
+<div>
+    <h2>Json Pipe</h2>
+    {{ jsonData | json}}
+</div>
+
+<!-- Custom Pipe -->
+<div>
+    <h2>Custom Pipe</h2>
+    Digits in given number {{ num}} is :{{ num | countDigit }}
+</div>
